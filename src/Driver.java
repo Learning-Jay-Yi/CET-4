@@ -15,6 +15,7 @@ public class Driver {
     ArrayList<Words> currentWrong = new ArrayList<Words>();
     public void run(ArrayList<Words> wordsArrayList, ArrayList<WrongWords> wrongWords) {
         Boolean quite;
+        System.out.println("This word list have " + wordsArrayList.size() + " words");
         do {
             for (Words word : wordsArrayList) {
                 System.out.println("Write the word base on word's mean: ");
