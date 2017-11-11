@@ -5,7 +5,7 @@
  * Data: 11.11.2017
  */
 public class WrongWords extends Words {
-    private int times;
+    private int times = 1;
     public WrongWords(String word,String propety, String means,int times) {
         super(word, propety, means);
         this.times = times;
@@ -21,6 +21,6 @@ public class WrongWords extends Words {
 
     @Override
     public String toString() {
-        return super.getWord() + " " +super.getProperty()+ " " + super.getMeans() + " " + times;
+        return super.getWord() + " " + super.getProperty() + " " + super.getMeans() + " " + times;
     }
 }

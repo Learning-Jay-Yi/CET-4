@@ -50,7 +50,7 @@ public class Start {
     private static HashMap<Integer, String> preLoad() {
         HashMap<Integer, String> wordList = new HashMap<Integer, String>();
         for (int i =1; i<36;i++){
-            wordList.put(i,"WordList"+i+".txt");
+            wordList.put(i,"/Users/KBOY/IdeaProjects/CET-4/WordList/WordList"+i+".txt");
         }
         return wordList;
     }

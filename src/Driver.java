@@ -1,3 +1,9 @@
+/**
+ * Class: Driver
+ * Purpose: testing words
+ * Author: Learning_Jay
+ * Data: 11.11.2017
+ */
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.util.ArrayList;
@@ -34,6 +40,9 @@ public class Driver {
             else
                 quite = false;
         }while (quite);
+        System.out.println("You type wrongly: "+ countWrong + " Words.");
+        for (Words w: currentWrong)
+            System.out.println(w.toString());
         saveWrongWords(wrongWords);
         saveCurrentWrong();
     }
@@ -70,10 +79,13 @@ public class Driver {
         Boolean flag = false;
         countWrong++;
         currentWrong.add(word);
-        for (WrongWords w :wrongWords) {
-            if (word.getWord().equalsIgnoreCase(w.getWord()))
-                flag = true;
-                w.setTimes(w.getTimes()+1);
+        if(wrongWords != null){
+            for (WrongWords w :wrongWords) {
+                if (word.getWord() == w.getWord()){
+                    flag = true;
+                    w.setTimes(w.getTimes()+1);
+                }
+            }
         }
         if (!flag)
             wrongWords.add(new WrongWords(word.getWord(),word.getProperty(),word.getMeans(),1));
